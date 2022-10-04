@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+
+    <div class="container" id="two">
+        <h3>Please enter details below to drop complaints with us</h3>
+		<form class="was-validated mt-5">
+            <div class="form-group">
+                <label>Fullname:</label>
+                <input type="password" name="" class="form-control" required>
+                <div class="valid-feedback">field no longer empty</div>
+                <div class="invalid-feedback">fill up thie field</div>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="text" name="" class="form-control" required>
+                <div class="valid-feedback">field no longer empty</div>
+                <div class="invalid-feedback">fill up this field</div>
+            </div>
+            <div class="form-group">
+                <label>Message:</label>
+                <textarea name="" id="" cols="30" rows="10" class="form-control" required></textarea>
+                <div class="valid-feedback">field no longer empty</div>
+                <div class="invalid-feedback">fill up this field</div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success">Submit</button>
+            </div>
+		</form>
+	</div>
+
+<%- include('./partials/footer.ejs') %>

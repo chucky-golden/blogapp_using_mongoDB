@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Blog | <%= title %></title>
+	<link rel="stylesheet" href="/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/dist/css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md bg-dark fixed-top">
+		<!-- logo/brand -->
+		<a href="/" class="navbar-brand">
+            <img src="/img/art.jpg" alt="" width="50" height="50"> Indiana
+        </a>
+		<!-- toggler/collapsible button -->
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#mynavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		 <!-- navbar link -->
+		 <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
+		 	<ul class="navbar-nav">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/blogs/news" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/blogs/create" class="nav-link">create</a></li>
+                <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+		 	</ul>
+		 </div>
+	</nav>

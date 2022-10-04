@@ -1,0 +1,26 @@
+setting up mongoDB
+
+you can install monogoDB locally and use on your system or
+visit https://account.mongodb.com create and log into your account
+
+after you log in, create a cluster, select the shared version which is free unless
+you have cash to splash...
+select provider and region or you can leave it as default. give the cluster a name and
+click on create
+
+after cluster has been created, click on collections to create a database and click on
+add own data. give the database a name and d collect a name. note that collect is
+equivalent to tables in SQL database. while documents are equivalent to table rows in
+SQL databases
+
+after creating a collection, you need to create a user that can access the database from
+our code. So click on database access under security, and click on add new database user
+enter username and password and give read and write access to the user and click on create.
+
+go back to database and click on connect, click on connectyour application and copy connection
+string.
+
+and it is better to use a package called mongoose to connect and interact with monogoDB
+
+for schema... we make the schema, then we define a model based on that schema, and the model 
+should be the singular of the collection in our database

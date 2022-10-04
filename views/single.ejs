@@ -1,0 +1,33 @@
+<%- include('./partials/header.ejs') %>
+
+    <div class="container" id="three">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/uploads/<%= blog.img %>" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h3><b><%= blog.title %></b></h3>
+                <p><b><%= blog.mytime %></b></p>
+                <p><%= blog.body %></p>
+                <div class="float-right">
+                    <a class="btn btn-danger text-light delete" data-doc="<%= blog._id %>">delete post</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script>
+    const trashcan = document.querySelector('a.delete');
+
+    trashcan.addEventListener('click', (e) => {
+        const endpoint = `/blogs/delete/${trashcan.dataset.doc}`;
+
+        fetch(endpoint, {
+            method: 'DELETE'
+        })
+        .then((response) => response.json())
+        .then((data) => window.location.href = data.redirect)
+        .catch((err) => console.log(err))
+    })
+</script>
+<%- include('./partials/footer.ejs') %>

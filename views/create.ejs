@@ -1,0 +1,46 @@
+<%- include('./partials/header.ejs') %>
+
+	<div class="container" id="form">
+		<h1 class="text-center">Create Blog Post</h1>
+		<form class="mt-5 pt-5" action="/blogs/addnew" method="POST" enctype="multipart/form-data">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Blog Title</label>
+						<input type="text" name="title" class="form-control" required>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Blog snippet</label>
+						<input type="text" name="snippet" class="form-control" required>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label>Blog Body</label>
+                        <textarea name="body" class="form-control"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label>Blog Picture</label>
+                        <input type="file" name="file" required>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<center>
+						<button class="btn btn-success">Submit</button>
+					</center>
+				</div>
+			</div>
+		</form>
+	</div>
+
+<%- include('./partials/footer.ejs') %>
